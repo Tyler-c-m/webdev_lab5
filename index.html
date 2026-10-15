@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Exploring HTML forms</title>
+</head>
+<body>
+    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+      
+      
+      <h1>Volunteer Form</h1>
+      
+      
+      <fieldset>
+        <legend>Your Information <em>(please...)</em></legend>
+      
+
+        <div>
+          <br><label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="first_name_field" required><br><br>
+        </div>
+        
+        
+        <div>
+          <!-- Last Name -->
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="last_name_field" required><br><br>
+
+        </div>
+
+
+        <div>
+          <!-- Phone Number -->  
+          <label for="phone">Phone:</label><br>
+          <input type="tel" id="phone" name="phone_field" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+        
+        </div>
+    
+        
+        <div>
+          <!-- Email -->  
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email_field" required><br><br>
+        </div>
+
+
+        <div>
+          <!-- Gender -->    
+          <label for="gender">Gender:</label><br><br>
+          <input type="radio" id="male" name="gender_field" value="male" required>
+          <label for="male">Male</label><br>
+          <input type="radio" id="female" name="gender_field" value="female">
+          <label for="female">Female</label><br>
+          <input type="radio" id="other" name="gender_field" value="other">
+          <label for="other">Other</label><br><br>
+        </div>
+
+
+        <div>
+          <label for="age">Age <em>(I won't judge):</em></label><br><br>
+          <select name="age_field" id="age" required>
+          <option value="under18">Under 18</option>
+          <option value="18-30">18-30</option>
+          <option value="31-50">31-50</option>
+          <option value="over50">Over 50 (Damn you're old...)</option>
+          </select>
+        </div>
+
+      </fieldset>
+
+      
+      <br><br>
+
+
+      <fieldset>
+
+
+        <legend>Days You're Available <em>(Please be convenient enough...)</em></legend>
+
+
+        <div>
+          <br><label for="days">Availability:</label><br><br>
+
+          <input type="checkbox" id="Day1" name="available_field[]" value="Sunday">
+          <label for="Day1"> Sunday</label><br>
+          <input type="checkbox" id="Day2" name="available_field[]" value="Monday">
+          <label for="Day2"> Monday</label><br>
+          <input type="checkbox" id="Day3" name="available_field[]" value="Tuesday">
+          <label for="Day3"> Tuesday</label><br>
+          <input type="checkbox" id="Day4" name="available_field[]" value="Wednesday">
+          <label for="Day4"> Wednesday</label><br>
+          <input type="checkbox" id="Day5" name="available_field[]" value="Thursday">
+          <label for="Day5"> Thursday</label><br>
+          <input type="checkbox" id="Day6" name="available_field[]" value="Friday">
+          <label for="Day6"> Friday</label><br>
+          <input type="checkbox" id="Day7" name="available_field[]" value="Saturday">
+          <label for="Day7"> Saturday</label><br><br>
+        </div>
+
+
+        <div>
+          <label for="comments">Comments:</label><br>
+          <textarea name="comments_field" id="comments" rows="6" cols="25"></textarea><br><br>
+
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+
+        
+        <input type="hidden" id="creator" name="hidden_field" value="Tyler Madourie">
+      
+      
+      </fieldset>
+
+      
+    </form>
+</body>
+</html>
